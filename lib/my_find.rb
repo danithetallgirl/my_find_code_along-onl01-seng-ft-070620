@@ -8,7 +8,7 @@ def my_find(collection)
     i = i + 1
   end
   
-  if block_returns.include
+  if block_returns.include?
 end
 
 my_find(collection) {|i| }
