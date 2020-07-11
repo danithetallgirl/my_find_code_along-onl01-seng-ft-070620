@@ -2,13 +2,13 @@ require 'pry'
 
 def my_find(collection)
   i = 0
+  block_returns = []
   while i < collection.length
-    yield(collection[i])
+    block_returns << yield(collection[i])
     i = i + 1
   end
+  
+  if block_returns
 end
 
-my_find() {|i| }
-
-collection = (1..100).to_a
-my_find(collection) {|i| i % 3 == 0 and i % 5 == 0 }
+my_find(collection) {|i| }
